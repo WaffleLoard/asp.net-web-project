@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="MacKayPWebProject.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Minesweeper</title>
+    <link href="../Styles/MainStyles.css" rel="stylesheet" type="text/css" />
+    <script src="../JS/MineSweeper.js" type="text/javascript"></script>
+    <script src="../JS/Validation.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <header>
+        <img src="../Media/header1.jpg" class="headerIMG"/>
+
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form id="form1" runat="server">
+        <div class="row">
+            <div class="column" id="firstColum">
+                <span id="navBar">
+                <a href="Default.aspx"><img src="../Media/homeIMG.jpg" /></a><br />
+                <a href="Game.aspx"><img src="../Media/playIMG.jpg" /></a><br />
+                <a href="About.aspx"><img src="../Media/aboutIMG.jpg" /></a><br />
+                </span>
+            </div>
+            <div class="column">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="column" id="lastColumn">
+                <h2>How to Play</h2>
+                <p>Minesweeper is a game of counting, to start, enter in a size and number of desired mines.</p>
+                <p>Then click 'Go', click a random box to reveal a starting location.</p>
+                <p>The numbers you see represent how many mines are in the surrounding eight boxes.</p>
+                <p>A good tip for starting out is to look for '1's on a corner, because they are on a corner you can deduce that the corner is a bomb.</p>
+            </div>
+        </div>
+    </form>
+    <footer>
+        <img src="../Media/footer1.jpg" class="headerIMG"/>
+    </footer>
+</body>
+</html>
